@@ -1,9 +1,14 @@
 version: 0.2
 
 
-phases:  
+phases:
+    install:
+     runtime-versions:
+        nodejs:10
+     commands:
+        -npm install
     pre_build:    
-     commands:      
+     commands:
       - echo Logging in to Amazon ECR...      
       - aws --version      
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
