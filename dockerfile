@@ -6,7 +6,7 @@ RUN go get github.com/laurelehigbee/proj3
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
-WORKDIR /home/node/app
+WORKDIR /node/src/github.com/laurelehigbee/proj3
 
 COPY package*.json ./
 
